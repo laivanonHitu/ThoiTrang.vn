@@ -16,7 +16,7 @@ import com.Trangsuc.vn.Entity.Slide;
 import ProductDTO.ProductDTO;
 
 @Service
-public class HomeServiceImpl implements HomeServiceI {
+public class HomeServiceImpl implements IhomeServiceI {
 	@Autowired(required = true)
 	private CategoryDAO categoryDAO;
 
@@ -25,9 +25,10 @@ public class HomeServiceImpl implements HomeServiceI {
 
 	@Autowired(required = true)
 	private menuDAO menuDAO;
-	
+
 	@Autowired(required = true)
-	private ProductDTO_DAO  productDAO;
+	private ProductDTO_DAO productDAO;
+
 	/*
 	 * public void setCategoryDAO(CategoryDAO categoryDAO) { this.categoryDAO =
 	 * categoryDAO; }
@@ -54,4 +55,7 @@ public class HomeServiceImpl implements HomeServiceI {
 	public List<ProductDTO> getAllProduct() {
 		return this.productDAO.getAllProduct();
 	}
+
+	
+
 }

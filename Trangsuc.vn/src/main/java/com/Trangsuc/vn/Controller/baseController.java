@@ -6,12 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.Trangsuc.vn.Service.HomeServiceI;
+import com.Trangsuc.vn.Service.IProductService;
+import com.Trangsuc.vn.Service.IhomeServiceI;
 
 @Controller
 public class baseController {
 	@Autowired
-	public HomeServiceI _homeServiceI;
+	public IhomeServiceI _homeServiceI;
+	
+	@Autowired
+	public IProductService _IProductService;
+	
+	
 	public ModelAndView _mv = new ModelAndView();
 
 	@PostConstruct
@@ -19,8 +25,10 @@ public class baseController {
 		_mv.addObject("listSlide", this._homeServiceI.getAllSlide());
 		_mv.addObject("category", this._homeServiceI.getAllCategory());
 		_mv.addObject("menus", this._homeServiceI.getAllMenu());
+		
+		//product
 		_mv.addObject("products", this._homeServiceI.getAllProduct());
-		_mv.addObject("products", this._homeServiceI.getAllProduct());
+		
 		return _mv;
 	}
 }

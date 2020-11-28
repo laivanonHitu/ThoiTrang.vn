@@ -19,21 +19,24 @@ public class MapperProductDTO implements RowMapper<ProductDTO> {
 		pDTO.setSizes(rs.getString("sizes"));
 
 		pDTO.setName(rs.getString("name"));
+		
 		pDTO.setPrice(rs.getDouble("price"));
 
 		pDTO.setSale(rs.getDouble("sale"));
 
 		pDTO.setTitle(rs.getString("title"));
-		//
+		
 		pDTO.setHighlight(rs.getBoolean("highlight"));
 
 		pDTO.setNew_product(rs.getBoolean("new_product"));
+		
 		pDTO.setDetails(rs.getString("details"));
 
 		pDTO.setId_color(rs.getInt("id_color"));
 
 		pDTO.setName_color(rs.getString("name_color"));
 
+		
 		pDTO.setCode_color(rs.getString("code_color"));
 
 		pDTO.setImg(rs.getString("img"));

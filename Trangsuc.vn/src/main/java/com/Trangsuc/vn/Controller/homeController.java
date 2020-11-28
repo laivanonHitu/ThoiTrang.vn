@@ -7,23 +7,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 @org.springframework.stereotype.Controller
 public class homeController extends baseController {
+	
+	
 
-	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
 	public ModelAndView homeView(Model model) {
-		ModelAndView mv = new ModelAndView("user/index");
-		mv.addObject("slides", this._homeServiceI.getAllSlide());
-		mv.addObject("categorys", this._homeServiceI.getAllCategory());
-		mv.addObject("menus", this._homeServiceI.getAllMenu());
-		mv.addObject("products", this._homeServiceI.getAllProduct());
-		mv.setViewName("user/index");
-		return mv;
+		_mv.addObject("slides", this._homeServiceI.getAllSlide());
+		_mv.addObject("categorys", this._homeServiceI.getAllCategory());
+		_mv.addObject("menus", this._homeServiceI.getAllMenu());
+		_mv.addObject("products", this._homeServiceI.getAllProduct());
+		_mv.addObject("Banner", this._IProductService.getProductBanner());
+		
+		_mv.setViewName("web/web");
+		return _mv;
 	}
-
-	@RequestMapping(value = { "/product" })
-	public ModelAndView Product() {
-		ModelAndView mv = new ModelAndView("user/product");
-		mv.setViewName("user/product");
-		return mv;
-	}
-
 }

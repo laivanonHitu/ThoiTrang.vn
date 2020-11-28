@@ -22,7 +22,7 @@ public class ProductDTO {
 	private String details;
 
 	private int id_color;
-
+	
 	private String name_color;
 
 	private String code_color;

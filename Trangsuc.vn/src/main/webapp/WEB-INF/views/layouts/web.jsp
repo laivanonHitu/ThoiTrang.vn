@@ -11,14 +11,12 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Bootstrap styles -->
-<link href="<c:url value="/assets/user/css/bootstrap.css" />" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/assets/user/css/bootstrap.css" rel="stylesheet" />
 <!-- Customize styles -->
-<link href="<c:url value="/assets/user/style.css" />" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/assets/user/style.css"  rel="stylesheet" />
 <!-- font awesome styles -->
-<link href="<c:url value="/assets/user/font-awesome/css/font-awesome.css" />" rel="stylesheet">
-
-<!-- Favicons -->
-<link rel="shortcut icon" href="<c:url value="/assets/user/ico/favicon.ico" />">
+<link href="${pageContext.request.contextPath}/assets/user/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/user/ico/favicon.ico" >
 <decorator:head />
 </head>
 <body>
@@ -70,14 +68,14 @@ Lower Header Section
 		<div class="container">
 			<p class="pull-right">
 				<a href="#"><img
-					src="<c:url value="/assets/user/img/maestro.png"/>" alt="payment"></a>
+					src="<c:url value="${pageContext.request.contextPath}/assets/user/img/maestro.png"/>" alt="payment"></a>
 				<a href="#"><img src="<c:url value="/assets/user/img/mc.png"/>"
 					alt="payment"></a> <a href="#"><img
-					src="<c:url value="/assets/user/img/pp.png"/>" alt="payment"></a>
+					src="<c:url value="${pageContext.request.contextPath}/assets/user/img/pp.png"/>" alt="payment"></a>
 				<a href="#"><img
-					src="<c:url value="/assets/user/img/visa.png"/>" alt="payment"></a>
+					src="<c:url value="${pageContext.request.contextPath}/assets/user/img/visa.png"/>" alt="payment"></a>
 				<a href="#"><img
-					src="<c:url value="/assets/user/img/disc.png"/>" alt="payment"></a>
+					src="<c:url value="${pageContext.request.contextPath}/assets/user/img/disc.png"/>" alt="payment"></a>
 			</p>
 			<span>Copyright &copy; 2013<br> bootstrap ecommerce
 				shopping template
@@ -86,12 +84,12 @@ Lower Header Section
 	</div>
 	<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src=" <c:url value="/assets/user/js/jquery.js" />"></script>
-	<script src="<c:url value="/assets/user/js/bootstrap.min.js" />"></script>
+	<script src="${pageContext.request.contextPath}/assets/user/js/jquery.js" ></script>
+	<script src="${pageContext.request.contextPath}/assets/user/js/bootstrap.min.js" ></script>
 	<script
-		src="<c:url value="/assets/user/js/jquery.easing-1.3.min.js" />"></script>
+		src="${pageContext.request.contextPath}/assets/user/js/jquery.easing-1.3.min.js"></script>
 	<script
-		src="<c:url value="/assets/user/js/jquery.scrollTo-1.4.3.1-min.js" />"></script>
-	<script src="<c:url value="/assets/user/js/shop.js" /> "></script>
+		src="${pageContext.request.contextPath}/assets/user/js/jquery.scrollTo-1.4.3.1-min.js" ></script>
+	<script src="${pageContext.request.contextPath}/assets/user/js/shop.js" ></script>
 </body>
 </html>
